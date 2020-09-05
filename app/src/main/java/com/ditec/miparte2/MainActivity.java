@@ -136,14 +136,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Snackbar.make(view, "Replace with your own action",
                 Snackbar.LENGTH_LONG).setAction("Action", null).show();
     }
+    Snackbar bar;
     public void fabderecha(View view) {
-        Snackbar.make(view,"¿Estás seguro?", Snackbar.LENGTH_LONG)
+        bar= Snackbar.make(view,"¿Estás seguro?", Snackbar.LENGTH_INDEFINITE)
                 .setAction("SI", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        bar.dismiss();
 //tu evento
                     }
-                })
-                .show();
+                });
+        bar.show();
     }
 }
