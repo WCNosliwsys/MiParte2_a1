@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     @Override
@@ -130,5 +131,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, "Se pulso el floating button de la izquierda "+ view.getTag(), Toast.LENGTH_LONG).show();
         else
             Toast.makeText(this, "Se pulso el floating button de la derecha "+ view.getTag(), Toast.LENGTH_LONG).show();
+    }
+    public void fabizquierda(View view) {
+        Snackbar.make(view, "Replace with your own action",
+                Snackbar.LENGTH_LONG).setAction("Action", null).show();
+    }
+    public void fabderecha(View view) {
+        Snackbar.make(view,"¿Estás seguro?", Snackbar.LENGTH_LONG)
+                .setAction("SI", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+//tu evento
+                    }
+                })
+                .show();
     }
 }
