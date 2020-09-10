@@ -23,6 +23,8 @@
         <activity android:name=".Comunicacion3" />
         <activity android:name=".Comunicacion2" />
         <activity android:name=".Comunicacion1" />
+        <service android:name=".JobIntentServiceMusica"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
